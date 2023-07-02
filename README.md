@@ -76,11 +76,17 @@ sed -i 's/astro\/client/@astrojs\/image\/client/g' src/env.d.ts
 # npx astro add auth-astro
 # for theming
 npm i -D @tailwindcss/typography@latest daisyui@latest react-daisyui@latest
+# icons
+npm i astro-icon
+# seo
+npm i astro-seo
 
 mkdir src/components
 mkdir src/layouts
 mkdir src/markdown
 ```
+
+Add `site: "https://test.springmicrohost.app",` to `astro.config.mjs`.
 
 ### Deployment
 
