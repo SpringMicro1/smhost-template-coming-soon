@@ -10,8 +10,8 @@ module.exports = {
       fontFamily: {
         // https://tailwindcss.com/docs/font-family
         // sans, serif, mono are ui defaults.
-        display: ["Oswald", "sans-serif"],
-        body: ['"Open Sans"', "sans-serif"],
+        display: ["Trebuchet", "sans-serif"],
+        body: ['"Arial"', "sans-serif"],
       },
     },
   },

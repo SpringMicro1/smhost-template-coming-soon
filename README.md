@@ -60,6 +60,9 @@ https://docs.astro.build/en/guides/integrations-guide/#building-your-own-integra
 # empty, typescript=strict
 npm create astro
 npx astro add tailwind sitemap mdx prefetch react
+# tailwind https://docs.astro.build/en/guides/integrations-guide/tailwind/
+npx astro add tailwind
+sed -i 's/tailwind()/tailwind({applyBaseStyles: false})/g' astro.config.mjs
 # images https://docs.astro.build/en/guides/integrations-guide/image/
 npx astro add image
 npm i sharp
@@ -73,7 +76,6 @@ sed -i 's/astro\/client/@astrojs\/image\/client/g' src/env.d.ts
 # npx astro add auth-astro
 # for theming
 npm i -D @tailwindcss/typography@latest daisyui@latest react-daisyui@latest
-
 
 mkdir src/components
 mkdir src/layouts
@@ -98,5 +100,3 @@ module.exports = {
   plugins: [],
 };
 ```
-
-#### Add daisyUI

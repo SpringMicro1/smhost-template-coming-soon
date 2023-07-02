@@ -9,7 +9,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), sitemap(), image({
+  integrations: [tailwind({applyBaseStyles: false}), sitemap(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), mdx(), prefetch(), react()]
 });

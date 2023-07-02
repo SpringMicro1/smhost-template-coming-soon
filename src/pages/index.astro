@@ -1,5 +1,7 @@
 ---
 import { Button } from "react-daisyui" 
+import "../base.css"
+const buttonColors = ["primary" , "neutral" , "secondary" , "accent" , "ghost" , "info" , "success" , "warning" , "error"] as Array<"primary" | "neutral" | "secondary" | "accent" | "ghost" | "info" | "success" | "warning" | "error">
 ---
 
 <html lang="en" data-theme="mytheme">
@@ -11,7 +13,16 @@ import { Button } from "react-daisyui"
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<Button color="primary">hi</Button>
+		<section class="prose">
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</section>
+		<section class="flex gap-2">
+			{buttonColors.map(color => <Button color={color}>{color}</Button>)}
+		</section>
 	</body>
 </html>
