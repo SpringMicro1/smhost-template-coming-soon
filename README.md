@@ -106,3 +106,11 @@ module.exports = {
   plugins: [],
 };
 ```
+
+#### DaisyUI
+
+##### Menus
+
+See https://daisyui.com/components/menu/.
+
+`Menu.Dropdown` expands into the document flow: https://github.com/daisyui/react-daisyui/blob/7922a9f7b04a490c666a792a304d18f80feddaa4/src/Menu/Menu.stories.tsx#L647. `Menu.Details` creates an overlay: https://github.com/daisyui/react-daisyui/blob/7922a9f7b04a490c666a792a304d18f80feddaa4/src/Menu/Menu.stories.tsx#L1075.
