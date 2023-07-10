@@ -1,7 +1,7 @@
 const config = {
   METADATA: {
     SITE_NAME: "My Company Name",
-    SITE_URL: "https://mysite.springmicrohost.app",
+    SITE_URL: "https://smhost-template-coming-soon.springmicrohost.com",
     META_TITLE_DEFAULT: "My Company Name - Just a Generic Company",
     META_DESCRIPTION_DEFAULT:
       "My Company Name provides generic services to generic customers.",
