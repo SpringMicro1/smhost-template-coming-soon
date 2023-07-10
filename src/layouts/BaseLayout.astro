@@ -42,9 +42,19 @@ const makeDescription = description ?? METADATA.META_DESCRIPTION_DEFAULT
           title: METADATA.OPENGRAPH_TITLE,
           image: resolvedImageWithDomain,
         },
+        optional: {
+          description: makeDescription,
+          siteName: METADATA.SITE_NAME
+        },
         image: {
           alt: METADATA.OPENGRAPH_IMAGE_ALT_TEXT,
         },
+      }}
+      twitter={{
+        card: "summary_large_image",
+        image: resolvedImageWithDomain,
+        title: makeTitle,
+        description: makeDescription
       }}
     />
   </head>
