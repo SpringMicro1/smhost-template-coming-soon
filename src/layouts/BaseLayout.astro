@@ -1,12 +1,11 @@
 ---
 import { SEO } from "astro-seo";
-// import "@fontsource/inter/variable.css";
 import { METADATA } from "../config"
-import Navbar from "../components/layout/Navbar";
 import "../base.css"
 
 export interface Props {
   title: string;
+  description?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -16,11 +15,13 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + METADATA.COMPANY_NAME
+  ? title + " | " + METADATA.SITE_NAME
   : METADATA.META_TITLE_DEFAULT;
+
+const makeDescription = description ?? METADATA.META_DESCRIPTION_DEFAULT
 ---
 
 <!DOCTYPE html>
@@ -32,7 +33,7 @@ const makeTitle = title
     <meta name="generator" content={Astro.generator} />
     <SEO
       title={makeTitle}
-      description={METADATA.META_DESCRIPTION}
+      description={makeDescription}
       canonical={canonicalURL}
       openGraph={{
         basic: {

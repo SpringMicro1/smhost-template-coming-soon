@@ -48,7 +48,7 @@ export default function Navbar(navBarProps: any) {
           </Dropdown.Menu>
         </Dropdown>
         <a className="btn btn-ghost normal-case text-xl">
-          {METADATA.COMPANY_NAME}
+          {METADATA.SITE_NAME}
         </a>
       </DaisyNavbar.Start>
       <DaisyNavbar.Center className="hidden lg:flex">
